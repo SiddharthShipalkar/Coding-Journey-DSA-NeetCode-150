@@ -69,6 +69,9 @@ def print_List(head):
         print(temp.val)
         temp=temp.next
 
+#My first approch 
+#time Complexity: O(N^2)
+#Space Complexity: O(1)
 def reorderList( head: ListNode) -> None:
         slow=head
         while slow.next:
@@ -85,6 +88,9 @@ def reorderList( head: ListNode) -> None:
             else:
                 slow=slow.next
 
+#My Second Revised approch 
+#time Complexity: O(N)
+#Space Complexity: O(1)
 def reorderList_newSol( head: ListNode) -> None: 
         slow, fast = head, head.next
         while fast and fast.next:
