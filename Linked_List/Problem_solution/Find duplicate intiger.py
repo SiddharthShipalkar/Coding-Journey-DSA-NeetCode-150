@@ -30,28 +30,22 @@ class FindDuplicate:
         # Phase 1: Detect the intersection point in the cycle
         tortoise = self.nums[0]
         hare = self.nums[0]
-        
-        print(f"Initial Tortoise: {tortoise}, Hare: {hare}")
-        
+                
         # Loop to find the intersection point
         while True:
             tortoise = self.nums[tortoise]  # Move tortoise one step
             hare = self.nums[self.nums[hare]]  # Move hare two steps
-            print(f"Tortoise: {tortoise}, Hare: {hare}")
             
             if tortoise == hare:  # They meet at some point
-                print(f"Intersection found at: {tortoise}")
                 break
 
         # Phase 2: Find the entrance to the cycle (duplicate number)
         tortoise = self.nums[0]  # Start tortoise from the beginning
         
         while tortoise != hare:
-            print(f"Tortoise: {tortoise}, Hare: {hare}")
             tortoise = self.nums[tortoise]  # Move tortoise one step
             hare = self.nums[hare]  # Move hare one step
         
-        print(f"Duplicate number found: {hare}")
         return hare  # The duplicate number
 
 # To debug or test the code, you can instantiate the class with the nums array and call find_duplicate
