@@ -48,16 +48,16 @@ class LinkedList:
             temp.next=newNode
         self.length+=1
 
-def reverseKGroup( head: ListNode, k: int) -> ListNode:
-    temp = head
-    pre=None
-    nxt=None
-    while temp:
-        for _ in range(k):
-            if temp.next:
+# def reverseKGroup( head: ListNode, k: int) -> ListNode:
+#     temp = head
+#     pre=None
+#     nxt=None
+#     while temp:
+#         for _ in range(k):
+#             if temp.next:
                 
 
 
-my_linked_list = LinkedList(1)
-my_linked_list.append(2)
-my_linked_list.append(3)
+# my_linked_list = LinkedList(1)
+# my_linked_list.append(2)
+# my_linked_list.append(3)
